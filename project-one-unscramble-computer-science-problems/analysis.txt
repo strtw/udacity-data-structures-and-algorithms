@@ -1,0 +1,71 @@
+Worst case Big 0 Analysis:
+
+    Tasks0.py:
+
+        This task is in constant time because no matter the length
+        of the input, the output won't grow relative to input size.
+
+        0(1) time
+        
+     Tasks1.py:
+
+        Analyzing: uniqueTelephoneNumbers function
+         
+         The uniqueTelephoneNumbers function 
+         iterates each n row in the call, within each
+         iteration there is a lookup or set to a dictionary
+         which is avg constant time. Printing the result requires
+         two calls to the function but we drop the constants to the result
+         is 0(n) time. 0(n) space is because if each number in the list is
+         unique, there would be n numbers. 
+
+        0(n) time - 
+       
+     Tasks2.py:
+
+        Analyzing: longestCall function
+
+         Similar to Tasks1, this function iterates through the list
+         and stores data in a dictionary. It differs because at the end
+         of the function it loops through the uniqueCalls dictionary to 
+         update the longestCallData dictionary. However this does not increase
+         the time complexity beyond n because it is 2n and the coefficent is dropped
+         The additional space is constant because it would never exceed the 
+         memory allocated for a Python int
+    
+         
+       0(n) time
+
+    Tasks3.py:
+
+        Part A:
+        Analyzing: callCodesFromBangalore
+
+        I analzed the component functions of callCodesFromBangalore
+        and determined that they all had max 0(n). Thus the most complexity
+        comes from the sorted call. 
+
+       
+        O(n log n) time 
+
+        Part B:
+       
+        Analyzing: interBangaloreFixedCalls
+
+        Again, I analzed the component function and they all here
+        max 0(1). The 0(n) comes from looping through the call log. 
+
+       
+        0(n) time 
+        0(1) space
+
+
+    Tasks4.py
+        Analyzing: printAnswer function
+
+        From my previous submission I updated my answer to iterate once through the calls log and text log,
+        and then use set operators which have 0(1) average time complexity to store and isolate the potential
+        telemarketers. The final time complexity comes from using the sorted function
+
+        O(n log n) time 
+       
